@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--new bootstrap link-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+
+  <title>Quiz Time</title>
+</head>
+
+<body>
+
+
+
+  <header class="header">
+  
+    <div class="main_menu">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand logo_h"> <img src="pm.png"></a>
+        <!-- Brand and toggle get grouped for better mobile display -->
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+
+
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">GK</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Math</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Coding</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact us</a>
+    </li>
+
+            </ul>
+        </div>
+        
+      </nav>
+    </div>
+  </header>
+  <section>
+    <div class="container">
+      <p>2. Who invented the Telephone?</p>
+      <h5>Choose 1 answer</h5>
+
+
+      <div id='block-11' style='padding: 10px;'>
+        <label for='option-11' style=' padding: 5px; font-size: 2.5rem;'>
+          <h4>
+            <input type='radio' name='option' value='6/24' id='option-11'
+              style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            Thomas Alva Edison
+          </h4>
+        </label>
+        <span id='result-11'></span>
+      </div>
+
+
+      <div id='block-12' style='padding: 10px;'>
+        <label for='option-12' style=' padding: 5px; font-size: 2.5rem;'>
+          <h4>
+            <input type='radio' name='option' value='6' id='option-12'
+              style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            Albert Einstein
+          </h4>
+        </label>
+        <span id='result-12'></span>
+      </div>
+
+
+      <div id='block-13' style='padding: 10px;'>
+        <label for='option-13' style=' padding: 5px; font-size: 2.5rem;'>
+          <h4>
+            <input type='radio' name='option' value='1/3' id='option-13'
+              style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            Issac Newton
+          </h4>
+        </label>
+        <span id='result-13'></span>
+      </div>
+
+
+      <div id='block-14' style='padding: 10px;'>
+        <label for='option-14' style=' padding: 5px; font-size: 2.5rem;'>
+          <h4>
+            <input type='radio' name='option' value='1/6' id='option-14'
+              style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+            Alexander Graham Bell
+          </h4>
+        </label>
+        <span id='result-14'></span>
+      </div>
+
+      <button type='button' onclick='displayAnswer2()'>Submit</button>
+      <hr />
+
+      <div class="button float-right">
+        <a class="btn btn-success btn-lg" href="index2.html" role="button">Next</a>
+      </div>
+    </div>
+  </section>
+
+  <a id='showanswer2'></a>
+  <script>
+
+    //    The function evaluates the answer and displays result
+
+    function displayAnswer2() {
+      if (document.getElementById('option-11').checked) {
+        document.getElementById('block-11').style.border = '3px solid red'
+        document.getElementById('result-11').style.color = 'red'
+        document.getElementById('result-11').innerHTML = 'Incorrect!'
+      }
+      if (document.getElementById('option-12').checked) {
+        document.getElementById('block-12').style.border = '3px solid red'
+        document.getElementById('result-12').style.color = 'red'
+        document.getElementById('result-12').innerHTML = 'Incorrect!'
+        showCorrectAnswer2()
+      }
+      if (document.getElementById('option-13').checked) {
+        document.getElementById('block-13').style.border = '3px solid red'
+        document.getElementById('result-13').style.color = 'red'
+        document.getElementById('result-13').innerHTML = 'Incorrect!'
+        showCorrectAnswer2()
+      }
+      if (document.getElementById('option-14').checked) {
+        document.getElementById('block-14').style.border = '3px solid limegreen'
+        document.getElementById('result-14').style.color = 'limegreen'
+        document.getElementById('result-14').innerHTML = 'Correct!'
+        showCorrectAnswer2()
+      }
+    }
+    // the functon displays the link to the correct answer
+    // function showCorrectAnswer2() {
+    //   let showAnswer2 = document.createElement('p')
+    //   showAnswer2.innerHTML = 'Show Corrent Answer'
+    //   showAnswer2.style.position = 'relative'
+    //   showAnswer2.style.top = '-180px'
+    //   showAnswer2.style.fontSize = '1.75rem'
+    //   document.getElementById('showanswer2').appendChild(showAnswer2)
+    //   showAnswer2.addEventListener('click', () => {
+    //     document.getElementById('block-14').style.border = '3px solid limegreen'
+    //     document.getElementById('result-14').style.color = 'limegreen'
+    //     document.getElementById('result-14').innerHTML = 'Correct!'
+    //     document.getElementById('showanswer2').removeChild(showAnswer2)
+    //   })
+    // }
+  </script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+crossorigin="anonymous"></script>
+</body>
+
+</html>
